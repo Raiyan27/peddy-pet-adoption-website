@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-white">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0E7A81',
+            }
+          }
+        }
+      }
+    </script>
     <style>
         .lato {
             font-family: "Lato", sans-serif;
@@ -15,8 +28,105 @@
         }
     </style>
 </head>
-<body class="lato">
-    <h1>Peddy</h1>
+<body class="lato text-black">
+    <div id="nav-bar" class="navbar container mx-auto">
+        <div class="navbar-start">
+            <img src="./images/logo.webp" alt="">
+          <h1 class="text-2xl">Peddy</h1>
+        </div>
+        <div class="navbar-center">
+          <ul class="flex gap-4 text-xl">
+            <li>Home</li>
+            <li>Shop</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="navbar-end ">
+          <img src="./images/profile.png" alt="">
+        </div>
+    </div>
+
+    <section id="hero" class="container mx-auto text-center my-20">
+        <h3 class="text-lg my-4">Bringing Families Together❤️‍</h3>
+        <h1 class="text-4xl my-4 font-bold">Your Path to Adopton Starts Here</h1>
+        <p class="max-w-3xl mx-auto">Bringing families together with love and care, we are here to guide you every step of the way in your adoption journey. Your path to adoption starts here, creating lifelong connections and cherished memories.</p>
+        <button onclick="loadAllPets();" class="btn bg-primary border-none my-4 text-white text-2xl">View More</button>
+        <div >
+            <img class="mx-auto" src="./images/pet.webp" alt="">
+        </div>
+    </section>
+    <section id="selectors" class="text-center my-20">
+        <h1 class="text-3xl my-4 font-bold">Adopt Your Best Friend</h1>
+        <p class="max-w-2xl mx-auto">Looking for a loyal companion? Adopt your new best friend today and give a pet in need a loving home. Whether you're seeking a playful puppy, a calm cat, or a cuddly companion, your future furry family member is waiting to meet you!</p>
+        <div id="btn-container" class="flex justify-around gap-20 mx-auto my-10 container">
+            <button id="dogs" class="btn w-52 h-20 bg-white text-xl font-bold text-black focus:rounded-full hover:bg-green-100 focus:bg-[rgba(14,122,129,15%)]"><img class="w-8" src="./images/shiba.png" alt=""> Dogs</button>
+            <button id="cats" class="btn w-52 h-20 bg-white text-xl font-bold text-black focus:rounded-full hover:bg-green-100 focus:bg-[rgba(14,122,129,15%)]"><img class="w-8" src="./images/cat.png" alt="">Cats</button>
+            <button id="rabbits" class="btn w-52 h-20 bg-white text-xl font-bold text-black focus:rounded-full hover:bg-green-100 focus:bg-[rgba(14,122,129,15%)]"><img class="w-8" src="./images/rabbit.png" alt="">Rabbits</button>
+            <button id="birds" class="btn w-52 h-20 bg-white text-xl font-bold text-black focus:rounded-full hover:bg-green-100 focus:bg-[rgba(14,122,129,15%)]"><img class="w-8" src="./images/parrot.png" alt="">Birds</button>
+        </div>
+        <div class="flex container mx-auto justify-between items-center">
+            <h1 class="text-3xl font-bold">Best Deals For You</h1>
+            <button class="btn bg-primary text-white border-none my-10 text-xl"> Sort by Price</button>
+        </div>
+    </section>
+
+    <section id="2-conainter-box" class="grid grid-cols-6 container mx-auto gap-4">
+        <div id="shop" class=" border rounded-lg col-span-4 p-4 mb-10">
+            <div id="post-container" class="grid grid-cols-3 gap-4">
+                <!-- fetch all data here -->
+            </div>
+        </div>
+
+        <div id="shop" class=" border rounded-lg col-span-2 p-4 mb-10">
+            <div id="liked-container" class="grid grid-cols-2 gap-4">
+                <!-- fetch all data here -->
+            </div>
+        </div>
+
+       
+    </section>
+
+
+
+
+    <footer class="footer bg-[#131313] text-base-content p-10 flex justify-around">
+        <nav>
+            <div class="flex gap-1">
+                <img src="./images/logo.webp" alt="">
+              <h1 class="text-xl">Peddy</h1>
+            </div>
+          <p class="max-w-72">Location: av. Washington 165, NY CA 54003
+            Phone: +31 85 964 47 25<br>
+            Email: info@yourdomain.com<br>
+            Openings hours: 9.00 AM - 5.00 PM</p>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Useful LInks</h6>
+          <a class="link link-hover">Home</a>
+          <a class="link link-hover">About Us</a>
+          <a class="link link-hover">Animals</a>
+          <a class="link link-hover">Foundation</a>
+          <a class="link link-hover">Contact</a>
+        </nav>
+        <form>
+          <h6 class="footer-title">Newsletter</h6>
+          <fieldset class="form-control >
+            <label class="label">
+              <span class="label-text">Drop A Message</span>
+            </label>
+            <div class="join">
+              <input
+                type="text"
+                placeholder="username@site.com"
+                class="input input-bordered join-item" />
+              <button class="btn bg-primary join-item text-white">Subscribe</button>
+            </div>
+          </fieldset>
+        </form>
+      </footer>
+
+
+
     <script src="./scripts.js"></script>
 </body>
 </html>
