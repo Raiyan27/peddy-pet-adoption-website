@@ -58,22 +58,23 @@
     <section id="selectors" class="text-center my-20">
         <h1 class="text-3xl my-4 font-bold">Adopt Your Best Friend</h1>
         <p class="max-w-2xl mx-auto">Looking for a loyal companion? Adopt your new best friend today and give a pet in need a loving home. Whether you're seeking a playful puppy, a calm cat, or a cuddly companion, your future furry family member is waiting to meet you!</p>
-        <div id="btn-container" class="flex justify-around gap-20 mx-auto my-10 container">
-            <button id="dogs" class="btn w-52 h-20 bg-white text-xl font-bold text-black focus:rounded-full hover:bg-green-100 focus:bg-[rgba(14,122,129,15%)]"><img class="w-8" src="./images/shiba.png" alt=""> Dogs</button>
-            <button id="cats" class="btn w-52 h-20 bg-white text-xl font-bold text-black focus:rounded-full hover:bg-green-100 focus:bg-[rgba(14,122,129,15%)]"><img class="w-8" src="./images/cat.png" alt="">Cats</button>
-            <button id="rabbits" class="btn w-52 h-20 bg-white text-xl font-bold text-black focus:rounded-full hover:bg-green-100 focus:bg-[rgba(14,122,129,15%)]"><img class="w-8" src="./images/rabbit.png" alt="">Rabbits</button>
-            <button id="birds" class="btn w-52 h-20 bg-white text-xl font-bold text-black focus:rounded-full hover:bg-green-100 focus:bg-[rgba(14,122,129,15%)]"><img class="w-8" src="./images/parrot.png" alt="">Birds</button>
+        <div id="category-container" class="flex justify-around gap-20 mx-auto my-10 container">
+            <!-- fetch category here -->
         </div>
         <div class="flex container mx-auto justify-between items-center">
             <h1 class="text-3xl font-bold">Best Deals For You</h1>
-            <button class="btn bg-primary text-white border-none my-10 text-xl"> Sort by Price</button>
+            <button onclick="sortByPrice()" class="btn bg-primary text-white border-none my-10 text-xl"> Sort by Price</button>
         </div>
     </section>
 
     <section id="2-conainter-box" class="grid grid-cols-6 container mx-auto gap-4">
         <div id="shop" class=" border rounded-lg col-span-4 p-4 mb-10">
+            <div id="loading" class="flex justify-center col-span-4">
+                <span class="loading loading-bars loading-lg"></span>
+            </div>
             <div id="post-container" class="grid grid-cols-3 gap-4">
                 <!-- fetch all data here -->
+                
             </div>
         </div>
 
@@ -86,6 +87,20 @@
        
     </section>
 
+    <!-- Open the modal using ID.showModal() method remove later -->
+<button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
 
 
 
