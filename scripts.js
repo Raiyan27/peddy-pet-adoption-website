@@ -83,13 +83,13 @@ const displayAllPets = async (pets) => {
                 <div class="card-body">
                     <h2 class="card-title text-2xl font-bold truncate">${pets.pet_name ? pets.pet_name : 'Information Unavailable'}</h2>
                     <ul class="flex flex-col">
-                    <li>Breed: ${pets.breed ? pets.breed : 'Information Unavailable'}</li>
-                    <li>Birth: ${pets.date_of_birth ? pets.date_of_birth : 'Information Unavailable'}</li>
-                    <li>Gender: ${pets.gender ? pets.gender : 'Information Unavailable'}</li>
-                    <li>Price: $${pets.price ? pets.price : 'Information Unavailable'}</li>
+                    <li><strong>Breed: </strong>${pets.breed ? pets.breed : 'Information Unavailable'}</li>
+                    <li><strong>Birth: </strong>${pets.date_of_birth ? pets.date_of_birth : 'Information Unavailable'}</li>
+                    <li><strong>Gender: </strong>${pets.gender ? pets.gender : 'Information Unavailable'}</li>
+                    <li><strong>Price: </strong>$${pets.price ? pets.price : 'Information Unavailable'}</li>
                     </ul>
                     <hr>
-                    <div class="flex gap-4 justify-center">
+                    <div class="flex gap-2 justify-center">
                     <button onclick="likedPets('${pets.image}')" class="btn text-black bg-white border-base-100 hover:bg-pink-200">
                         <img src="./images/like.png" alt="Like" />
                     </button>
@@ -124,6 +124,7 @@ const showDetail = async(id) => {
                 <p><strong>Gender:</strong> ${petData.gender ? petData.gender : 'Information Uavailable'}</p>
                 <p><strong>Vaccinated Status:</strong> ${petData.vaccinated_status ? petData.vaccinated_status : 'Information Uavailable'}</p>
                 <p><strong>Price:</strong> $${petData.price ? petData.price : 'Information Uavailable'}</p>
+                <hr class="my-4">
                 <p class="py-4">${petData.pet_details ? petData.pet_details : 'Information Uavailable'}</p>
                 <div class="modal-action">
                     <button id="closeModalButton" class="btn">Close</button>

@@ -34,57 +34,66 @@
             <img src="./images/logo.webp" alt="">
           <h1 class="text-2xl">Peddy</h1>
         </div>
-        <div class="navbar-center">
+        <div class="navbar-center hidden md:flex">
           <ul class="flex gap-4 text-xl">
-            <li>Home</li>
-            <li>Shop</li>
-            <li>Contact</li>
+            <li><a>Home</a></li>
+            <li><a>Shop</a></li>
+            <li><a>Contact</a></li>
           </ul>
         </div>
-        <div class="navbar-end ">
+        <div class="navbar-end hidden md:flex">
           <img src="./images/profile.png" alt="">
+        </div>
+        <div class="navbar-end dropdown dropdown-end md:hidden flex">
+          <div tabindex="0" role="button" class="btn m-1 bg-white rounded-full w-12"><img class="w-full" src="./images/menu.png" alt=""></div>
+          <ul tabindex="0" class="dropdown-content menu bg-white rounded-box z-[1] w-52 p-2 shadow">
+            <li><a>Home</a></li>
+            <li><a>Shop</a></li>
+            <li><a>Contact</a></li>
+          </ul>
         </div>
     </div>
 
-    <section id="hero" class="container mx-auto text-center my-20">
+    <section id="hero" class="container mx-auto text-center my-20  p-4">
         <h3 class="text-lg my-4">Bringing Families Together❤️‍</h3>
         <h1 class="text-4xl my-4 font-bold">Your Path to Adopton Starts Here</h1>
         <p class="max-w-3xl mx-auto">Bringing families together with love and care, we are here to guide you every step of the way in your adoption journey. Your path to adoption starts here, creating lifelong connections and cherished memories.</p>
-        <button onclick="loadAllPets();" class="btn bg-primary border-none my-4 text-white text-2xl">View More</button>
+        <button  onclick="loadAllPets();" class="btn bg-primary border-none my-4 text-white text-2xl"><a href="#2-conainter-box">View More</a></button>
         <div >
             <img class="mx-auto" src="./images/pet.webp" alt="">
         </div>
     </section>
-    <section id="selectors" class="text-center my-20">
+    <section id="selectors" class="text-center my-20 p-4">
         <h1 class="text-3xl my-4 font-bold">Adopt Your Best Friend</h1>
         <p class="max-w-2xl mx-auto">Looking for a loyal companion? Adopt your new best friend today and give a pet in need a loving home. Whether you're seeking a playful puppy, a calm cat, or a cuddly companion, your future furry family member is waiting to meet you!</p>
-        <div id="category-container" class="flex justify-around gap-20 mx-auto my-10 container">
+        <div id="category-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-around gap-5 md:gap-10 lg:gap-20 mx-auto my-10 container ">
             <!-- fetch category here -->
         </div>
-        <div class="flex container mx-auto justify-between items-center">
+        <div class="flex flex-col md:flex-row container mx-auto justify-between items-center">
             <h1 class="text-3xl font-bold">Best Deals For You</h1>
             <button onclick="sortByPrice()" class="btn bg-primary text-white border-none my-10 text-xl"> Sort by Price</button>
         </div>
     </section>
 
-    <section id="2-conainter-box" class="grid grid-cols-6 container mx-auto gap-4">
-        <div id="shop" class=" border rounded-lg col-span-4 p-4 mb-10">
+    <section id="2-conainter-box" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 container mx-auto gap-4  p-4">
+        <div id="shop" class=" border rounded-lg lg:col-span-4 p-4 mb-10">
             <div id="loading" class="flex justify-center col-span-4">
                 <span class="loading loading-bars loading-lg"></span>
             </div>
-            <div id="post-container" class="grid grid-cols-3 gap-4">
+            <div id="post-container" class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                 <!-- fetch all data here -->
                 
             </div>
         </div>
 
-        <div id="shop" class=" border rounded-lg col-span-2 p-4 mb-10">
+        <div id="shop" class=" border rounded-lg lg:col-span-2 p-4 mb-10">
             <div id="liked-container" class="grid grid-cols-2 gap-4">
                 <!-- fetch all data here -->
             </div>
         </div>   
     </section>
-    <footer class="footer bg-[#131313] text-base-content p-10 flex justify-around">
+
+    <footer class="footer bg-[#131313] text-base-content p-10 flex justify-around flex-col md:flex-row">
         <nav>
             <div class="flex gap-1">
                 <img src="./images/logo.webp" alt="">
@@ -106,10 +115,10 @@
         <form>
           <h6 class="footer-title">Newsletter</h6>
           <fieldset class="form-control >
-            <label class="label">
+            <label class='label'>
               <span class="label-text">Drop A Message</span>
             </label>
-            <div class="join">
+            <div class="join gap-2 flex flex-col md:flex-row md:gap-0">
               <input
                 type="text"
                 placeholder="username@site.com"
