@@ -19,4 +19,5 @@ The Pet Adoption Platform is an interactive web application designed to facilita
 
 
 ## Live Link
-
+**surge:** ph-a-6.surge.sh
+**Netlify:** https://ph-a-6.netlify.app/ 
