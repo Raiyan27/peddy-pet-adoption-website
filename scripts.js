@@ -64,8 +64,13 @@ const displayAllPets = async (pets) => {
 
     if(pets.length === 0){
         postContainer.innerHTML = `  
-        <div class="text-center bg-orange-100 col-span-4 rounded-lg">
-            <h1 class='text-3xl'>No Information</h1>
+        <div class="text-center bg-orange-100 col-span-4 rounded-lg py-4">
+            
+            <div class="flex justify-center">
+                <img src="./images/missing.png" alt="">
+            </div>
+            <h1 class='text-3xl my-4 font-bold'>No Information Available</h1>
+            <p class="text-center">The category you are looking for doesn't contain any data provided by the server. Please Look for something else</p>
         </div>`;
         return; 
     }
@@ -202,8 +207,11 @@ const handleAdopt = (event) => {
         <dialog id="my_modal_1" class="modal">
             <div class="modal-box" style="background-color: white;">
                 <h3 class="text-2xl font-bold text-center">Thank You for Adopting!</h3>
+                <div class="flex justify-center">
+                    <img class="w-40" src="./images/handshake.png" alt="">
+                </div>
                 <span class="countdown flex justify-center p-10">
-                    <span id="countdown" style="--value: 3;"></span>
+                    <span id="countdown" class="text-6xl" style="--value: 3;"></span>
                 </span>
             </div>
         </dialog>
